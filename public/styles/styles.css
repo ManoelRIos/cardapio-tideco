@@ -1,0 +1,97 @@
+/*------RESET---------*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+body{
+  background-color: #fefefe;
+}
+
+h2, p, a, button, span {
+  color: #9D9797;
+  margin: 0;
+}
+
+:root{
+  font-size: 100%;  
+}
+
+.gap { 
+  margin: 0 1rem;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  padding: .4rem .8rem;
+  margin: .4rem;
+  width: 100%;
+  border-radius: .9rem; 
+  background-color: #FBBC04;
+  color: #fff;
+}
+
+.header-content .title p {
+  color: #fefefe;
+}
+
+.container { 
+  margin-bottom: 4rem;
+}
+
+
+main .categoria{
+  max-width: 100%;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  overflow-x: auto;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.categoria .card-cat{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 9px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;   */
+
+}
+
+main .cardapio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardapio .card .card-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardapio .card .card-title span{
+  color: green;
+  font-size: .8rem;
+}
