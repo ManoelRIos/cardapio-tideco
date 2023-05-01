@@ -7,24 +7,26 @@
   $price       = $_POST['price'];
   $file        = $_FILES['file'];
   $status      = $_POST['status'];
+  $categoria   = $_POST['categoria'];
 
   //Renomeando arquivo
   $rnm_file = md5(time()) . '.png';
   //Caminho para o upload
   $path_upload = "../../public/assets/imgs/";
 
-  $query = "INSERT INTO item_cardapio (title, description, price, image, status) VALUES ('$title', '$description', $price, :file, $status)";
-
+  $query = "INSERT INTO item_cardapio (title, description, price, image, status, categoria) VALUES ('$title', '$description', $price, :file, $status, '$categoria')";
+  
   $cad_item = $conn->prepare($query);
   $cad_item->bindParam(':file', $rnm_file);
   $cad_item->execute();
 
   if ($cad_item->rowCount()) {
-    if (move_uploaded_file($file['tmp_name'], $path_upload . $rnm_file)) {
+    $response = ['status' => true, 'msg' => "Sucesso"];
+    /* if (move_uploaded_file($file['tmp_name'], $path_upload . $rnm_file)) {
       $response = ['status' => true, 'msg' => "Sucesso"];
     } else {
       $response = ['status' => false, 'msg' => "Error"];
-    }
+    } */
   } else {
     $response = ['status' => false, 'msg' => "Error"];
   }

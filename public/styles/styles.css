@@ -56,8 +56,7 @@ h2, p, a, button, span {
   margin-bottom: 4rem;
 }
 
-
-main .categoria{
+main .categorias{
   max-width: 100%;
   display: flex;
   gap: 2rem;
@@ -67,15 +66,20 @@ main .categoria{
   margin-bottom: 2rem;
 }
 
-.categoria .card-cat{
+.categorias .card-cat{
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 9px;
   padding: 1rem;
   border: 1px solid #ccc;
-  /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;   */
+  cursor: pointer;
+  transition: .3s;
+}
 
+.categorias .card-cat:hover{
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 12px 12px 0px;  
+  transform: translateY(-5px);
 }
 
 main .cardapio{
@@ -83,6 +87,7 @@ main .cardapio{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 2rem;
 }
 
 .cardapio .card .card-title {

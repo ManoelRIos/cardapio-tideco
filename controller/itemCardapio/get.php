@@ -2,8 +2,10 @@
 
 include_once '../../conf/config.php';
 
+$id = $_GET['id'];
+
 //Cria a query
-$query = "SELECT id, title, description, price, image, status, categoria FROM item_cardapio LIMIT 10";
+$query = "SELECT id, title, description, price, image, status FROM item_cardapio WHERE id = $id";
 //Executa query
 $resp = $conn->prepare($query);
 $resp->execute();
