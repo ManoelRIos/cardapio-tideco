@@ -9,6 +9,7 @@ const getAllItens = async () => {
 const getItem = async (id) => {
   const item = await fetch("../controller/itemCardapio/get.php?id=" + id);
   const response = await item.json();
+  return response;
 };
 
 //Post Item Do Cardapio

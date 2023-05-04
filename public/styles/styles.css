@@ -90,13 +90,26 @@ main .cardapio{
   gap: 2rem;
 }
 
+.cardapio .card {
+  cursor: pointer;
+  text-decoration: none;
+  transition: .2s;
+}
+
+.cardapio .card:hover{
+  transform: translateY(-10px);
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 12px 12px 0px;  
+}
+
 .cardapio .card .card-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: #444;
 }
 
 .cardapio .card .card-title span{
   color: green;
-  font-size: .8rem;
+  font-size: 1rem;
 }
+

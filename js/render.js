@@ -80,7 +80,7 @@ async function listCardapio() {
   itens = itens.filter(item => item.status == 1)
   itens.forEach((item) => {
     cardapio.append(`
-    <div class="card" style="width: 18rem;">
+    <a class="card" style="width: 18rem;" id="${item.id}">
         <img class="card-img-top" src="../public/assets/imgs/${item.image}">
         <div class="card-body">
           <h5 class="card-title">${item.title}
@@ -88,7 +88,7 @@ async function listCardapio() {
           </h5>
           <p class="card-text">${item.description}</p>
         </div>
-      </div>`);
+      </a>`);
   });
 }
 
