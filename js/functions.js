@@ -1,4 +1,3 @@
-
 function setEditableInput(id){
   id = id.replace("btn_edit", "");
   $("#title" + id).attr("readonly", false);
@@ -22,13 +21,17 @@ function alertaSweetAlert2(icon, title, msgHTML) {
   });
 }
 
+//Formata numero para moeda brasileira
+const formatter = new Intl.NumberFormat("pt-BR", {
+  minimumFractionDigits: 2,
+});
+
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
   'use strict'
 
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
   var forms = document.querySelectorAll('.needs-validation')
-
   // Loop over them and prevent submission
   Array.prototype.slice.call(forms)
     .forEach(function (form) {
@@ -42,5 +45,3 @@ function alertaSweetAlert2(icon, title, msgHTML) {
       }, false)
     })
 })()
-
-console.log('../public/assets/imgs/14935ccde3fb9dffbd3a97fd0648798e.png')

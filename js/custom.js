@@ -1,4 +1,3 @@
-
 //Get ALl Itens Cardapio
 const getAllItens = async () => {
   const dados = await fetch("../controller/itemCardapio/list.php");
@@ -42,17 +41,18 @@ if (itemCardForm) {
     const response = await dadosPosted.json();
 
     if (response["status"]) {
-      console.log("PASSOU")
+      console.log("PASSOU");
       listItensOnTable();
-      alertaSweetAlert2('success', 'Sucesso', 'Item cadastrado com sucesso!')
+      alertaSweetAlert2("success", "Sucesso", "Item cadastrado com sucesso!");
     } else {
-      alertaSweetAlert2('error', 'Item Não Cadastrado', 'Entre em contato com o administrador!')
+      alertaSweetAlert2("error", "Item Não Cadastrado", "Entre em contato com o administrador!");
       //msg -> response['msg] -> erro
     }
   });
 }
 
 //DELETE
+
 async function deleteItemCardapio(id) {
   id = id.replace("btn_delete", "");
   Swal.fire({
@@ -72,11 +72,11 @@ async function deleteItemCardapio(id) {
       });
       const response = await dadosDeleted.json();
       if (response["status"]) {
-        alertaSweetAlert2("success", 'Sucesso', 'Item deletado com sucesso!');
+        alertaSweetAlert2("success", "Sucesso", "Item deletado com sucesso!");
 
         listItensOnTable();
       } else {
-        alertaSweetAlert2("error", 'Oops...', 'Houve um problema ao deletar o item!');
+        alertaSweetAlert2("error", "Oops...", "Houve um problema ao deletar o item!");
       }
     } else if (result.isDenied) {
     }
@@ -87,7 +87,7 @@ async function deleteItemCardapio(id) {
 async function putItemCardapio(btnId) {
   btnId = btnId.replace("btn_save", "");
   var id = $("#id" + btnId).text();
-  console.log(id)
+  console.log(id);
   var title = $("#title" + btnId).val();
   var description = $("#description" + btnId).val();
   var price = $("#price" + btnId).val();
@@ -96,13 +96,13 @@ async function putItemCardapio(btnId) {
   var categoria = $("#categoria" + btnId).val();
 
   var dadosFormPut = new FormData();
-  dadosFormPut.append('id', id)
-  dadosFormPut.append('title', title)
-  dadosFormPut.append('description', description)
-  dadosFormPut.append('price', price)
-  dadosFormPut.append('image', image)
-  dadosFormPut.append('status', status)
-  dadosFormPut.append('categoria', categoria)
+  dadosFormPut.append("id", id);
+  dadosFormPut.append("title", title);
+  dadosFormPut.append("description", description);
+  dadosFormPut.append("price", price);
+  dadosFormPut.append("image", image);
+  dadosFormPut.append("status", status);
+  dadosFormPut.append("categoria", categoria);
   /* var dadosFormPut = new FormData(formEdit); */
   console.log(dadosFormPut);
 
@@ -116,13 +116,13 @@ async function putItemCardapio(btnId) {
 
   if (response["status"]) {
     listItensOnTable();
-    setDisableInput('___' + response['id']);
-    alertaSweetAlert2("success", 'Sucesso', 'O item ' + response['id'] + ' foi atualizado com sucesso!');
+    setDisableInput("___" + response["id"]);
+    alertaSweetAlert2("success", "Sucesso", "O item " + response["id"] + " foi atualizado com sucesso!");
   } else {
-    alertaSweetAlert2("error", 'Oops...', 'Ouve um erro ao atualizar!');
+    alertaSweetAlert2("error", "Oops...", "Ouve um erro ao atualizar!");
   }
 
   if (response["msg"] == "img") {
-    alertaSweetAlert2("error", 'Oops...', 'Houve um problema ao atualizar a imagem!');
+    alertaSweetAlert2("error", "Oops...", "Houve um problema ao atualizar a imagem!");
   }
 }

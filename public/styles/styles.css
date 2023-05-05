@@ -101,7 +101,7 @@ main .cardapio{
   box-shadow: rgba(17, 12, 46, 0.15) 0px 12px 12px 0px;  
 }
 
-.cardapio .card .card-title {
+.cardapio .card .card-title { 
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -112,4 +112,3 @@ main .cardapio{
   color: green;
   font-size: 1rem;
 }
-

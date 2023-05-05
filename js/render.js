@@ -84,7 +84,7 @@ async function listCardapio() {
         <img class="card-img-top" src="../public/assets/imgs/${item.image}">
         <div class="card-body">
           <h5 class="card-title">${item.title}
-            <span>R$ ${item.price}</span>
+            <span>R$ ${formatter.format(item.price)}</span>
           </h5>
           <p class="card-text">${item.description}</p>
         </div>
