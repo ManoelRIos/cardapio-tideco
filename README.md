@@ -1,6 +1,5 @@
 <h1 align="center">
   <img alt="Tideco" title="Tideco" src="./github/logo.png" width="220px" />
-  <span>CARDAPIO TIDECO</span>
 </h1>
 
 <p align="center">
