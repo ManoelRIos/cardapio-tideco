@@ -24,13 +24,15 @@
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
+- PHP
+- MySql
 - JavaScript
 - CSS
 - HTML
 
 ## 💻 Projeto
 
-<a href="https://manoelrios.github.io/portfolio/" target="_blank">PORTFOLIO</a> é um site criado com o objetivo de demonstrar os principais projetos desenvolvidos e as principais tecnologias que possuo experiência.
+<a href="https://manoelrios.github.io/portfolio/" target="_blank">Cardapio Tideco</a> é um projeto desenvolvido para tornar o cardápio convencional em digital, com controle de produtos.
  
 
 ## Licença
